@@ -1,0 +1,66 @@
+You are a classifier trained to detect and categorize specific transcription errors produced by a speech recognition system. The possible categories are:
+
+1. **Hallucination Error**: The output contains fabricated, contradictory, or invented information that is not supported by the ground truth. This includes:
+   - **Fabricated Content**: Words or phrases entirely absent in the ground truth.
+   - **Meaningful Contradictions**: Significant changes in the meaning from the ground truth.
+   - **Invented Context**: Introduction of details or context not present in the ground truth.  
+   - **Note**: These errors involve fabrication of new information or significant distortion of meaning, beyond grammatical or structural mistakes.
+
+2. **Non-Hallucination Error**: Errors that do not involve fabrication or significant contradictions of the ground truth. These include:
+   - **Phonetic Errors**: Substitutions of phonetically similar words or minor pronunciation differences.
+   - **Structural or Language Errors**: Grammatical, syntactic, or structural issues that make the text incoherent or incorrect (e.g., incorrect verb tenses, subject-verb agreement problems, omissions, or insertions).
+   - **Oscillation Errors**: Repetitive, nonsensical patterns or sounds that do not convey linguistic meaning (e.g., "ay ay ay ay").
+   - **Other Non-Hallucination Errors**: Errors that do not fit the above subcategories but are not hallucinations.
+
+3. **No Error**: The generated output conveys the same meaning as the ground truth, even if the phrasing, grammar, or structure differs. Minor differences in wording, phrasing, or grammar that do not alter the intended meaning are acceptable.
+
+### Input Format:
+- **Ground Truth**: The original, accurate text provided.
+- **Generated Output**: The text produced by the speech recognition system.
+
+### Output Format:
+Classify the input text pairs into one of the following:
+- Non-Hallucination Error
+- Hallucination Error
+- No Error
+
+### Examples:
+
+**Example 1:**  
+Ground Truth: "A millimeter roughly equals one twenty-fifth of an inch."  
+Generated Output: "Miller made her roughly one twenty-fifths of an inch."  
+**Output**: Non-Hallucination Error  
+
+**Example 2:**  
+Ground Truth: "Indeed, ah!"  
+Generated Output: "Ay ay indeed ay ay ay ay ay ay."  
+**Output**: Non-Hallucination Error  
+
+**Example 3:**  
+Ground Truth: "Captain Lake did not look at all like a London dandy now."  
+Generated Output: "Will you let Annabel ask her if she sees what it is you hold in your arms again?"  
+**Output**: Hallucination Error  
+
+**Example 4:**  
+Ground Truth: "The patient was advised to take paracetamol for fever and rest for two days."
+Generated Output: "The patient was advised to take amoxicillin for fever and undergo surgery immediately."
+Output: Hallucination Error
+
+**Example 5:**  
+Ground Truth: "I need to book a flight to New York."  
+Generated Output: "I need to book ticket to New York."  
+**Output**: No Error  
+
+**Example 6:**  
+Ground Truth: "She went to the store yesterday."  
+Generated Output: "She went to the shop yesterday."  
+**Output**: No Error  
+
+**Instruction:**  
+You must produce only the classification as the output. Do not include explanations, reasoning, or additional information.
+
+**Input:**  
+Ground Truth: "{ground_truth}"  
+Generated Output: "{output}"  
+
+**Output:** {{insert your classification here}}

@@ -1,0 +1,80 @@
+{
+    "HaninZ/adversarial": {
+        "config": null,
+        "split": "train",
+        "text_column": "true_text",
+        "audio_column": "audio"
+    },
+    "macabdul9/BERSt": {
+        "config": null,
+        "split": "test",
+        "text_column": "script",
+        "audio_column": "audio"
+    },
+    "macabdul9/LibriSpeech_test_noise": {
+        "config": null,
+        "split": "test",
+        "text_column": "transcription",
+        "audio_column": "audio"
+    },
+    "macabdul9/Primock57": {
+        "config": null,
+        "split": "test",
+        "text_column": "transcription",
+        "audio_column": "audio"
+    },
+    "kensho/spgispeech": {
+        "config": "S",
+        "split": "test",
+        "text_column": "transcript",
+        "audio_column": "audio"
+    },
+    "macabdul9/salt-multispeaker-eng": {
+        "config": null,
+        "split": "test",
+        "text_column": "text",
+        "audio_column": "audio"
+    },
+    "MushanW/GLOBE": {
+        "config": null,
+        "split": "test",
+        "text_column": "transcript",
+        "audio_column": "audio"
+    },
+    "Jzuluaga/atcosim_corpus": {
+        "config": null,
+        "split": "test",
+        "text_column": "text",
+        "audio_column": "audio"
+    },
+    "edinburghcstr/ami": {
+        "config": "ihm",
+        "split": "test",
+        "text_column": "text",
+        "audio_column": "audio"
+    },
+    "asapp/slue": {
+        "config": "voxceleb",
+        "split": "test",
+        "text_column": "normalized_text",
+        "audio_column": "audio"
+    },
+    "janaab/supreme-court-speech": {
+        "config": null,
+        "split": "test",
+        "text_column": "transcript",
+        "audio_column": "audio"
+    },
+    "MWilinski/snips_slu_v1.0": {
+        "config": null,
+        "split": "train",
+        "text_column": "text",
+        "audio_column": "audio"
+    },
+    "kresnik/librispeech_asr_test": {
+        "config": "clean",
+        "split": "test",
+        "text_column": "text",
+        "audio_column": "audio"
+    }
+}

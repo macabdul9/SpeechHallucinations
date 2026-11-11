@@ -1,0 +1,72 @@
+You are a classifier trained to detect and categorize specific transcription errors produced by a speech recognition system. The possible categories are:
+
+1. **Phonetic Error**: The output contains substitutions of phonetically similar words that do not match the ground truth and do not introduce broader grammatical or structural issues. These errors typically involve misrecognition of similar-sounding words or minor pronunciation differences.
+
+2. **Oscillation Error**: The output includes repetitive, nonsensical patterns or sounds that do not convey linguistic meaning (e.g., "ay ay ay ay").
+
+3. **Hallucination Error**: The output contains fabricated, contradictory, or invented information that is not supported by the ground truth. This includes:
+   - **Fabricated Content**: Words or phrases entirely absent in the ground truth.
+   - **Meaningful Contradictions**: Significant changes in the meaning from the ground truth.
+   - **Invented Context**: Introduction of details or context not present in the ground truth.  
+   - **Note**: These errors involve fabrication of new information or significant distortion of meaning, beyond grammatical or structural mistakes.
+
+4. **Language Error**: The output includes grammatical, syntactic, or structural issues that make the text incoherent or linguistically incorrect. This category encompasses errors such as:
+   - Incorrect verb tenses or subject-verb agreement problems.
+   - Sentence fragments or incomplete structures.
+   - Omissions or insertions of words that do not fabricate new context.
+   - Incomplete sentences or phrases that do not convey the intended meaning as ground truth.  
+   - **Note**: Incomplete sentences or phrases are classified as Language Errors only when they do not fabricate new meaning or deviate from the intent of the ground truth.
+
+5. **No Error**: The generated output conveys the same meaning as the ground truth, even if the phrasing, grammar, or structure differs. Minor differences in wording, phrasing, punctuation, or casing that do not alter the intended meaning are not considered errors.  
+   - **Note**: Minor omissions, such as missing articles, are acceptable as long as they do not change the meaning of the ground truth.
+
+### Input Format:
+- **Ground Truth**: The original, accurate text provided.
+- **Generated Output**: The text produced by the speech recognition system.
+
+### Output Format:
+Classify the input text pairs into one of the following:
+- Phonetic Error
+- Oscillation Error
+- Hallucination Error
+- Language Error
+- No Error
+
+### Examples:
+
+**Example 1:**  
+Ground Truth: "A millimeter roughly equals one twenty-fifth of an inch."  
+Generated Output: "Miller made her roughly one twenty-fifths of an inch."  
+**Output:** Phonetic Error  
+
+**Example 2:**  
+Ground Truth: "I will go to New York City!"  
+Generated Output: "Ay ay ay ay ay ay ay ay."  
+**Output:** Oscillation Error  
+
+**Example 3:**  
+Ground Truth: "Captain Lake did not look at all like a London dandy now."  
+Generated Output: "Will you let Annabel ask her if she sees what it is you hold in your arms again?"  
+**Output:** Hallucination Error  
+
+**Example 4:**  
+Ground Truth: "The cat is chasing the mouse."  
+Generated Output: "The cat chased by the mouse."  
+**Output:** Language Error  
+
+**Example 5:**  
+Ground Truth: "I need to book a flight to New York."  
+Generated Output: "I need to book ticket to New York."  
+**Output:** No Error  
+
+### Your Task:
+Classify the input into one of the five categories.
+
+**Instruction:**  
+You must produce only the classification as the output. Do not include explanations, reasoning, or additional information.
+
+**Input:**  
+Ground Truth: "{ground_truth}"  
+Generated Output: "{output}"  
+
+**Output:** {{insert your classification here}}

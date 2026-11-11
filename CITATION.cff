@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: "Please cite the paper when using this research code."
+title: "Lost in Transcription, Found in Distribution Shift: Demystifying Hallucination in Speech Foundation Models"
+type: software
+authors:
+  - family-names: Atwany
+    given-names: Hanin
+  - family-names: Waheed
+    given-names: Abdul
+  - family-names: Singh
+    given-names: Rita
+  - family-names: Choudhury
+    given-names: Monojit
+  - family-names: Raj
+    given-names: Bhiksha
+repository-code: "https://github.com/macabdul9/SpeechHallucinations"
+preferred-citation:
+  type: conference-paper
+  title: "Lost in Transcription, Found in Distribution Shift: Demystifying Hallucination in Speech Foundation Models"
+  authors:
+    - family-names: Atwany
+      given-names: Hanin
+    - family-names: Waheed
+      given-names: Abdul
+    - family-names: Singh
+      given-names: Rita
+    - family-names: Choudhury
+      given-names: Monojit
+    - family-names: Raj
+      given-names: Bhiksha
+  collection-title: "Findings of the Association for Computational Linguistics: ACL 2025"
+  publisher:
+    name: "Association for Computational Linguistics"
+  year: 2025
+  month: 7
+  start: 23181
+  end: 23203
+  doi: "10.18653/v1/2025.findings-acl.1190"
+  url: "https://aclanthology.org/2025.findings-acl.1190/"
+  conference:
+    name: "Findings of the Association for Computational Linguistics: ACL 2025"
+    city: "Vienna"
+    country: "AT"

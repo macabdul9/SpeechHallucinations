@@ -1,0 +1,15 @@
+{
+    "librispeech_asr_test": "LibriSpeech",
+    "LibriSpeech_test_noise": "LibriSpeech test-noise",
+    "GLOBE": "GLOBE",
+    "spgispeech": "SPGISpeech",
+    "supreme-court-speech": "Supreme Court",
+    "Primock57": "Primock57",
+    "ami": "AMI",
+    "atcosim_corpus": "ATCOsim",
+    "slue": "SLUE-VoxCeleb",
+    "BERSt": "BERSt",
+    "adversarial": "Adversarial",
+    "salt-multispeaker-eng": "SALT Multispeaker",
+    "snips_slu_v1.0": "SNIPS SLU"
+}

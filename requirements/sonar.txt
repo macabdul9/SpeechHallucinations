@@ -1,0 +1,7 @@
+# SONAR embedding extraction. fairseq2 wheels are tied to specific torch/CUDA
+# builds; see the SONAR README for a matching combination.
+sonar-space==0.2.1
+fairseq2==0.2.0
+torch==2.2.1
+datasets==3.2.0
+soundfile==0.12.1

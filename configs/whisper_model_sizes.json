@@ -1,0 +1,16 @@
+{
+    "whisper-tiny": 39,
+    "whisper-tiny.en": 39,
+    "distil-small.en": 166,
+    "whisper-small": 244,
+    "whisper-small.en": 244,
+    "distil-medium.en": 394,
+    "distil-large-v2": 756,
+    "distil-large-v3": 756,
+    "whisper-medium": 769,
+    "whisper-medium.en": 769,
+    "whisper-large-v3-turbo": 809,
+    "whisper-large": 1550,
+    "whisper-large-v2": 1550,
+    "whisper-large-v3": 1550
+}
